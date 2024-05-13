@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Web Info</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css%20files/search.css">
+</head>
+<body class="container">
+
+<nav class="navbar navbar-height navbar-expand-sm navbar-color-hi navbar-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="aarsh.html">
+            <img src="Logo%202.png" alt="Aurora" style="width: 60px; height: 40px" class="rounded-pill">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Info Dropdown</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="Search.html">Search Info</a></li>
+                        <li><a class="dropdown-item" href="Web%20Info.html">Web Info</a></li>
+                        <li><a class="dropdown-item" href="Other%20Web%20Stuff.html">Other Web Info</a></li>
+                        <li><a class="dropdown-item" href="references.html">References</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="mt-10 p-4 rounded text-center">
+    <h1 class="mb-4 title-text-color" >The web is multifaceted and is rich with information. Below is some information
+        regarding the evolution of the web!</h1>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>What is the history of the web?</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>
+                In 1989, Tim Berners-Lee, a British computer scientist at CERN, invented the World Wide Web, proposing a
+                system of interlinked documents accessible via the internet. This led to the creation of the first web
+                browser and server in 1990, marking the start of rapid growth with the introduction of HTML, HTTP, and
+                URLs. The late 1990s dot-com boom fueled commercialization, shaping the modern web.
+            </td>
+        </tr>
+    </table>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>What is the present state of the web?</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>
+                The web today is defined by universal access, mobile dominance, social media influence, e-commerce
+                prevalence, and evolving technologies like AI and IoT, all while grappling with data privacy and
+                cyber-security concerns.
+            </td>
+        </tr>
+    </table>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>What is the future of the web?</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>
+                The future of the web is poised for continued evolution, driven by emerging technologies like artificial
+                intelligence, augmented reality, and blockchain. Trends include increased personalization, immersive
+                experiences, decentralized applications, and the Internet of Things integration. Challenges such as data
+                privacy, cyber-security, and digital inequality will also shape its trajectory.
+            </td>
+        </tr>
+    </table>
+</div>
+
+<form id="myForm">
+    <div class="mb-3 mt-3">
+        <label for="email" class="form-label">Did you enjoy the above content?</label>
+        <input type="text" class="form-control" id="email" placeholder="Yes, because..." name="email">
+    </div>
+    <div class="form-check mb-3">
+        <label class="form-check-label">
+            <input class="form-check-input" type="checkbox" name="laing"> Do you want to learn more about the history of the web?
+        </label>
+    </div>
+    <div class="form-check mb-3">
+        <label class="form-check-label">
+            <input class="form-check-input" type="checkbox" name="fairbanks"> Do you want to learn more about the present state of the web?
+        </label>
+    </div>
+    <div class="form-check mb-3">
+        <label class="form-check-label">
+            <input class="form-check-input" type="checkbox" name="fairbanks"> Do you want to learn more about the future of the web?
+        </label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<script>
+    document.getElementById("myForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        // Hide the form
+        document.getElementById("myForm").style.display = "none";
+
+        // Create success message alert
+        const alertDiv = document.createElement("div");
+        alertDiv.classList.add("alert", "alert-success");
+        alertDiv.innerHTML = "<p style='text-align: center;'>Thank you for your response! However <s>don't worry, this website will not teach you any other information as it is not stated in the guidelines!</s></p>";
+        document.body.appendChild(alertDiv);
+
+        // Remove the alert after a few seconds
+        setTimeout(function() {
+            alertDiv.remove();
+        }, 6000); // Adjust the time as needed (3000 milliseconds = 3 seconds)
+    });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

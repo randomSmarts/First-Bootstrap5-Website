@@ -1,0 +1,39 @@
+.first-paragraph-text-color {
+    color: rgb(0, 128, 0); /* Green color using RGB values */
+}
+
+.title-text-color {
+    color: darkslateblue;
+}
+
+
+
+html, body {
+    height: 100%; /* Ensure full height of viewport */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+.container {
+    min-height: 100%; /* Ensure container fills entire viewport height */
+
+    /* Linear gradient from top to bottom and set background-repeat to no-repeat */
+    background: linear-gradient(to bottom, #0093E9 0%, #80D0C7 100%);
+    /* Optionally, you can set background-size to cover for better compatibility */
+    background-size: cover;
+    font-family: Arial, sans-serif; /* Set font family */
+}
+
+.navbar-color-hi {
+    /* Background color with 50% transparency */
+    background-color: rgba(255, 99, 71, 1); /* Red with 90% transparency */
+}
+
+.navbar-height {
+    height: 80px; /* Set the height of the navbar */
+    display: inline-flex ;
+}
+
+
+
+
